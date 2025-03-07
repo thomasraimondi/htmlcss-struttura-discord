@@ -2,6 +2,7 @@
 :root {
   --containerW: 1000px;
   --sectionH: 150px;
+  --sectionImgW: 696px;
 }
 
 /* # RESET */
@@ -97,16 +98,17 @@ header .container .login {
 section > .container {
   display: flex;
   padding: 20px 0;
+  flex-wrap: wrap;
 }
 
 .container > .content-img {
-  flex-basis: 70%;
+  flex-basis: var(--sectionImgW);
   background-color: #1d90ff;
   padding: var(--sectionH);
   border: 2px dashed black;
 }
 .container > .content-text {
-  flex-basis: 30%;
+  flex-basis: calc(var(--containerW) - var(--sectionImgW));
   background-color: #ffc1ca;
   padding: var(--sectionH);
   border: 2px dashed black;
